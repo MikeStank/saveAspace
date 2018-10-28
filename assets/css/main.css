@@ -1,0 +1,159 @@
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box;}
+/* Input Fields - Full width  */
+input[input=text], input[input=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+/*  Modal 2 */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Style for Buttons  */
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Styles for Cancel Button */
+.cancelBtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+/* MODAL 2 - Cancel BTN */
+.cancelBtn2 {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Modal 2 - Float cancel & signup and equal width */
+.cancelBtn2, .signUpBtn {
+    float: left;
+    width: 50%;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+.rememberMe {
+    font-size: 12px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+    font-size: 12px;
+}
+
+/* Modal Background */
+.modal, .modal2 {
+    display: none;
+    position: fixed; /* Keeps Modal in plac */
+    z-index: 1; /* Keeps it sitting on top of the content */
+    left: 0;
+    top: 0;
+    width: 100%; /* fill width */
+    height: 100%; /* full height */
+    overflow: auto; /* enables scroll if needed*/
+    background-color: rgb(0,0,0); /* fallback color */
+    background-color: rgba(0,0,0,0.4); /* black with some opacity */
+    padding-top: 60px;
+}
+
+/* Content box for Modal */
+.modal-content, .modal2-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% fromt eh bottom and centered */
+    border: 1px solid #888;
+    width: 35%; 
+}
+
+/* Modal 2 - Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+.input-container {
+    width: 100%;
+    margin: 5% auto 5% auto;
+}
+/* Close Button */
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 0px;
+    color: #000;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+/* Modal 2 */
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Modal 2 - Clear Floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for 'span' and 'cancel' buttons on xtra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelBtn, .cancelBtn2, .signUpBtn {
+        width: 100%;
+    }
+}

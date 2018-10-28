@@ -1,0 +1,101 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <script src="assets/js/app.js"></script>
+</head>
+<body>
+
+   <div class="wrapper"> <!-- contains background image -->
+
+        <nav class="signInUp"> <!-- below are the buttons that will direct you to the Login or Sign Up pop up -->
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+        </nav>
+
+        <div id="id01" class="modal"> <!-- Form that pops up when you click Login -->
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span> <!-- Close Button -->
+                    <img src="" alt="Avatar" class="avatar"> <!-- Persons Image NEEDS IMAGE SOURCE -->
+                </div>
+
+                <div class=container>
+                    <div class="input-container">
+                        <label for="uname"><b>Username</b></label> <!-- Username -->
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="psw"><b>Password</b></label> <!-- Password -->
+                        <input type="text" placeholder="Enter Password" name="psw" required>
+                    </div>
+                    
+
+                    <button type="submit">Login</button>
+
+                    <label class="rememberMe">
+                        <input type="checkbox" checked="checked" name="remember"> Remember Me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color: #f1f1f1"> <!-- 'Footer' of Modal / Contains Cancel and Forgot Password Elements -->
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelBtn">Cancel</button>
+                    <span class="psw">I forgot my <a href="#">password</a></span>
+                </div>
+            </form>
+        </div>
+
+        <div id="id02" class="modal2">
+            <span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close">&times;</span>
+            <form class="modal2-content animate" action="/action_page.php">
+                <div class="container">
+                    <h1>Sign Up</h1>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="repeat-psw"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="repeat-psw" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px"> Remember Me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color: dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="clearfix"><button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelBtn2">Cancel</button>
+                        <button type="submit" class="signUpBtn">Sign Up</button>                    
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+            var modal = document.getElementById('id01');
+// When user clicks outside of modal it will close
+                window.onclick = function(event) {
+                 if (event.target == modal) {
+                     modal.style.display = "none";
+                     }
+                };
+
+            var modal2 = document.getElementById('id02');
+            window.onclick = function(event) {
+                 if (event.target == modal2) {
+                     modal2.style.display = "none";
+                     }
+                };
+        </script>
+        
+
+   </div> <!-- closes wrapper div containing background image -->
+    
+</body>
+</html>
