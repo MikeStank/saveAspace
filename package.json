@@ -1,0 +1,22 @@
+{
+  "name": "saveaspace",
+  "version": "1.0.0",
+  "description": "Spaces is a community of businesses that have open spaces in their parking lots or structures that they are willing to reserve for drivers in need of a reset.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeStank/saveAspace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeStank/saveAspace/issues"
+  },
+  "homepage": "https://github.com/MikeStank/saveAspace#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
